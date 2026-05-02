@@ -3,8 +3,8 @@
 A hands-on learning series from basic ladder logic to industrial automation and IIoT.
 
 ## Episodes
-- EP1: Basic Logic (AND / OR / NOT)
-- EP2: Start/Stop Circuit (Latch) + Emergency
+- [EP1: Basic Logic (AND / OR / NOT)](./EP1-Basic-Logic/README.md)
+- [EP2: Start/Stop Circuit (Latch) + Emergency](EP2-StartStop/README.md)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.
