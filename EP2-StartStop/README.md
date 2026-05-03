@@ -10,5 +10,8 @@
 ![thumbnail](./EP2_Start_Stop.png)
 ![Ladder](./EP2_Ladder.png)
 
+## Video
+👉 https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B
+
 ## Summary
 This EP demonstrates real industrial control logic using latch behavior and safety logic.

@@ -8,5 +8,8 @@
 ## Images
 ![Ladder_panel](./EP1_PLC_Logic_Gate.png)
 
+## Video
+👉 https://youtu.be/BJGo-j6a0_c?si=gdBQ90fzEpMhJKM0
+
 ## Summary
 This EP introduces the foundation of PLC logic using Siemens S7-1200.
