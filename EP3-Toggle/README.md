@@ -14,7 +14,7 @@
 
 
 ## Video
-👉 (Comming soon....)
+👉 [EP3: PLC Toggle / Flip-Flop Logic + R_TRIG](https://youtu.be/-S8t2O3HkqE?si=p_d-s1SEu82vD0in)
 
 ## Summary
 Control output using toggle logic.

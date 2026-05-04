@@ -24,18 +24,18 @@ The main goal is to understand how PLC timers control time-based behavior in ind
 |---|---:|---|
 | SW0-Start_Button | %I0.0 | Timer start button |
 | SW3-Machine_Enable | %I0.3 | Machine enable |
-| LED0 | %Q0.0 | TON output |
-| LED1 | %Q0.1 | TOF output |
-| LED2 | %Q0.2 | Ready status |
+| LED1 | %Q0.0 | TON output |
+| LED2 | %Q0.1 | TOF output |
+| LED0 | %Q0.2 | Ready status |
 
 ---
 
 ## Ladder Logic
 
-Comming Soon...
+![Ladder](Ladder.png)
 
 ## Video
-👉 (Comming soon....)
+👉 [EP4: PLC Timer Basics (TON / TOF)](https://youtu.be/82_njdIA_YY)
 
 ## Key Learning
 
