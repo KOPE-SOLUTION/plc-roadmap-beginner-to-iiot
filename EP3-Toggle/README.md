@@ -5,8 +5,13 @@
 - Flip-Flop (SR)
 - Button press behavior
 
+![FlowChart](FlowChart.png)
+
 ## Images
-(Comming soon...)
+
+![Ladder](ladder.png)
+
+
 
 ## Video
 👉 (Comming soon....)
