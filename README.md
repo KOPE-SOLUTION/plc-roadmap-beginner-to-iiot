@@ -3,6 +3,9 @@
 A hands-on learning series from basic ladder logic to industrial automation and IIoT.
 
 ## Episodes
+
+### PLC Fundamentals
+
 - [EP1: Basic Logic (AND / OR / NOT)](./EP1-Basic-Logic/README.md)
 - [EP2: Start/Stop Circuit (Latch) + Emergency](./EP2-StartStop/README.md)
 - [EP3: Toggle / Flip-Flop Logic](./EP3-Toggle/README.md)
