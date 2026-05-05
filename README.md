@@ -1,5 +1,7 @@
 # PLC Programming Roadmap (Siemens S7-1200)
 
+![Title](EP5-Counter-Basics/Title.png)
+
 A hands-on learning series from basic ladder logic to industrial automation and IIoT.
 
 ## Episodes
