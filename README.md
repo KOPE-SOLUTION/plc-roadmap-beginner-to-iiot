@@ -9,8 +9,8 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP1: Basic Logic (AND / OR / NOT)](./EP1-Basic-Logic/README.md)
 - [EP2: Start/Stop Circuit (Latch) + Emergency](./EP2-StartStop/README.md)
 - [EP3: Toggle / Flip-Flop Logic](./EP3-Toggle/README.md)
-- EP4: Timer Basics (TON / TOF)
-- EP5: Counter Basics (CTU / CTD)
+- [EP4: Timer Basics (TON / TOF)](./EP4-Timer-Basics/README.md)
+- [EP5: Counter Basics (CTU / CTD)](./EP5-Counter-Basics/README.md)
 
 ### PLC Automation
 
