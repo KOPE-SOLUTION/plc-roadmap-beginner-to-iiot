@@ -31,11 +31,11 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 ## Video
 
-👉 [EP1: Basic Logic (AND / OR / NOT)](https://youtu.be/BJGo-j6a0_c?si=gdBQ90fzEpMhJKM0)
-👉 [EP2: Start/Stop Circuit (Latch) + Emergency](https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B)
-👉 [EP3: PLC Toggle / Flip-Flop Logic + R_TRIG](https://youtu.be/-S8t2O3HkqE?si=p_d-s1SEu82vD0in)
-👉 [EP4: PLC Timer Basics (TON / TOF)](https://youtu.be/82_njdIA_YY)
-👉 [EP5: Couter Basics (CTU/CTD)](https://youtu.be/Gsp4bn9lxao)
+- [EP1: Basic Logic (AND / OR / NOT)](https://youtu.be/BJGo-j6a0_c?si=gdBQ90fzEpMhJKM0)
+- [EP2: Start/Stop Circuit (Latch) + Emergency](https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B)
+- [EP3: PLC Toggle / Flip-Flop Logic + R_TRIG](https://youtu.be/-S8t2O3HkqE?si=p_d-s1SEu82vD0in)
+- [EP4: PLC Timer Basics (TON / TOF)](https://youtu.be/82_njdIA_YY)
+- [EP5: Couter Basics (CTU/CTD)](https://youtu.be/Gsp4bn9lxao)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.

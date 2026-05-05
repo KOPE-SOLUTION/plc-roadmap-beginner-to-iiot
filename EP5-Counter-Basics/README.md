@@ -85,9 +85,9 @@ The main goal is to understand how a PLC counts events such as button presses, m
 
 ## Key Learning
 
-**A** counter is used to count events.
-**R_TRIG** is used before the counter so that one button press creates only one count pulse.
-**PV** is the target count value.
-**CV** is the current count value.
-**Q** or **QU** turns ON when the counter reaches the preset value.
+- **A** counter is used to count events.
+- **R_TRIG** is used before the counter so that one button press creates only one count pulse.
+- **PV** is the target count value.
+- **CV** is the current count value.
+- **Q** or **QU** turns ON when the counter reaches the preset value.
 
