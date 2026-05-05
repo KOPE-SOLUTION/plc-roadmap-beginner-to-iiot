@@ -21,6 +21,8 @@ The main goal is to understand how a PLC counts events such as button presses, m
 - Reset counter
 - R_TRIG for one-shot counting
 
+![Flow Chart](FlowChart.png)
+
 ---
 
 ## Hardware / Software
