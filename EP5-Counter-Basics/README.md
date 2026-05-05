@@ -2,7 +2,7 @@
 
 ## Overview
 
-
+![Title](headder.png)
 
 This episode introduces PLC counter instructions using Siemens S7-1200 and TIA Portal.
 
@@ -60,7 +60,9 @@ The main goal is to understand how a PLC counts events such as button presses, m
 
 ## Ladder Logic
 
-> Comming soon
+![ladder 1](Ladder_1.png)
+
+![ladder 2](Ladder_2.png)
 
 ## Video
 
