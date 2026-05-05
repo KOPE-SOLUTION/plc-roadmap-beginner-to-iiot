@@ -11,7 +11,7 @@
 ![Ladder](./EP2_Ladder.png)
 
 ## Video
-👉 https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B
+👉 [EP2: Start/Stop Circuit (Latch) + Emergency](https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B)
 
 ## Summary
 This EP demonstrates real industrial control logic using latch behavior and safety logic.

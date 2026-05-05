@@ -68,7 +68,7 @@ The main goal is to understand how a PLC counts events such as button presses, m
 
 ## Video
 
-👉 [EP5: Couter Basics (CTU/CTD)](https://youtu.be/82_njdIA_YY)
+👉 [EP5: Couter Basics (CTU/CTD)](https://youtu.be/Gsp4bn9lxao)
 
 
 ## Expected Result
