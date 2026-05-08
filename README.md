@@ -16,7 +16,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 ### PLC Automation
 
-- EP6: LED Sequence / Step Control
+- [EP6: LED Sequence / Step Control](EP6-LED-Sequence-Control/README.md)
 - EP7: Selector Switch Control
 - EP8: Manual / Auto Mode
 - EP9: Safety Logic and Emergency Handling
