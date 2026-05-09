@@ -18,20 +18,20 @@ Learn how to use Selector Switch logic in Siemens S7-1200 PLC.
 
 ## Inputs
 
-| Tag | Description |
-|---|---|
-| I0.3 | Machine Enable |
-| I0.4 | Select Right |
-| I0.5 | Select Left |
+| Tag | Address | Description |
+|---|---|---|
+| SW3_Machine_Enable | %I0.3 | Machine Enable |
+| SW4_Select_Right_SW | %I0.4 | Select Right |
+| SW5_Select_Left_SW | %I0.5 | Select Left |
 
 ---
 
 ## Outputs
 
-| Tag | Description |
-|---|---|
-| Q0.0 | RIGHT LED |
-| Q0.1 | LEFT LED |
+| Tag | Address | Description |
+|---|---|---|
+| LED0 | %Q0.0 | RIGHT LED |
+| LED1 | %Q0.1 | LEFT LED |
 
 ---
 
