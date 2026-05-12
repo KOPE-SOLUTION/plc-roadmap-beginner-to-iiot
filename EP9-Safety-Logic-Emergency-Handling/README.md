@@ -24,7 +24,6 @@ This episode introduces Emergency Stop systems and Safety Interlock concepts use
 | SW3_Machine_Enable | %I0.3 | Machine Enable |
 | SW0_Start_Button | %I0.0 | Start Button |
 | SW1_Stop_Button | %I0.1 | Stop Button |
-| SW2_Reset_Button | %I0.2 | Reset Button |
 | SW7_Emergency | %I0.7 | Emergency Stop |
 
 ---
