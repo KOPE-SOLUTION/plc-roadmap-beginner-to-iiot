@@ -4,6 +4,8 @@ Learn industrial safety logic using Siemens S7-1200 PLC.
 
 This episode introduces Emergency Stop systems and Safety Interlock concepts used in real industrial automation systems.
 
+![Thumbnail](Thumbnail-ep9.png)
+
 ---
 
 ## Topics
