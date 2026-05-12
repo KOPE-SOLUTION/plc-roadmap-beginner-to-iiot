@@ -18,7 +18,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 - [EP6: LED Sequence / Step Control](EP6-LED-Sequence-Control/README.md)
 - [EP7: Selector Switch Control](EP7-Selector-Switch-Control/README.md)
-- EP8: Manual / Auto Mode
+- [EP8: Manual / Auto Mode](EP8-Manual-Auto-Mode/README.md)
 - EP9: Safety Logic and Emergency Handling
 
 ### PLC to IIoT
@@ -37,6 +37,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP4: PLC Timer Basics (TON / TOF)](https://youtu.be/82_njdIA_YY)
 - [EP5: Couter Basics (CTU/CTD)](https://youtu.be/Gsp4bn9lxao)
 - [EP6: LED Sequence / Step Control](https://youtu.be/xPKJ8xttxAs?si=RFd-dyumXBMR9gtQ)
+- [EP7: Selector Switch Control](https://youtu.be/HdoPTU_7QGE?si=3iEiyeVjpQQnSZ5X)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.
