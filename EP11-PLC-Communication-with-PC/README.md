@@ -74,6 +74,20 @@ PC Reset
 | LED1_Alarm |   %Q0.1 | Alarm Status    |
 | LED2_Ready |   %Q0.2 | Machine Ready   |
 
+---
+
+## Memory Tags
+
+| Tag                   | Address | Description              |
+| --------------------- | ------: | ------------------------ |
+| M0_Run_Latch          |   %M0.0 | Machine Run Status       |
+| M1_Alarm_Latch        |   %M0.1 | Alarm Latch              |
+| M2_Start_Trig         |   %M0.2 | Start One-Shot Trigger   |
+| M3_Count_Done         |   %M0.3 | Counter Done             |
+| MW10_Production_Count |   %MW10 | Production Counter Value |
+| M4_Run_Trig         |   %M0.4 | PC Start Trigger             |
+| M5_Stop_Trig         |   %M0.5 | PC Stop Trigger             |
+| M6_Reset_Trig         |   %M0.6 | PC Reset Trigger             |
 
 ---
 
