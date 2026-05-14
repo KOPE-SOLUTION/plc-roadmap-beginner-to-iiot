@@ -24,12 +24,12 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 ### PLC to IIoT
 
 - [EP10: PLC Data Monitoring](EP10-PLC-Data-Monitoring/README.md)
-- EP11: PLC Communication with PC
+- [EP11: PLC Communication with PC](EP11-PLC-Communication-with-PC/README.md)
 - EP12: PLC to MQTT / Node-RED
 - EP13: PLC Dashboard
 - EP14: PLC + IIoT Mini Project
 
-## Video
+## YouTube Video
 
 - [EP1: Basic Logic (AND / OR / NOT)](https://youtu.be/BJGo-j6a0_c?si=gdBQ90fzEpMhJKM0)
 - [EP2: Start/Stop Circuit (Latch) + Emergency](https://youtu.be/YcimmIvBpzg?si=BUl9-Pd_ldI1VB6B)
@@ -40,6 +40,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP7: Selector Switch Control](https://youtu.be/HdoPTU_7QGE?si=3iEiyeVjpQQnSZ5X)
 - [EP8: Manual / Auto Mode](https://youtu.be/6NMlEiyF_Kk?si=kFa8mSmBHxIZWEv3)
 - [EP9: Safety Logic and Emergency Handling](https://youtu.be/yWszjPWKLWc?si=PoH_98gOj-Z1dvOA)
+- [EP10: PLC Data Monitoring](https://youtu.be/bd6XKbTyVKI)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.
