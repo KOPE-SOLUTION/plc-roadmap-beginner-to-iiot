@@ -4,6 +4,8 @@ This episode introduces Industrial IoT communication using Siemens S7-1200 PLC.
 
 The goal is to send PLC machine data to Node-RED and publish it to an MQTT Broker.
 
+![Thumbnail](Thumbnail-ep12.png)
+
 ---
 
 ## System Architecture
