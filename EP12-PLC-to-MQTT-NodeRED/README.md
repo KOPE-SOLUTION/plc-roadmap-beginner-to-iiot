@@ -103,11 +103,23 @@ Open Watch Table in TIA Portal and verify:
 | PLC_Ready_Status     | TRUE when machine ready                 |
 | PLC_Production_Count | Increases when production count changes |
 
+![step-1-1](step-1-tia-watch-1.png)
+
+![step-1-2](step-1-tia-protection-1.png)
+
+![step-1-3](step-1-tia-protection-2.png)
+
+![step-1-4](step-1-tia-db100-1.png)
+
+![step-1-5](step-1-tia-db100-2.png)
+
 ### Step 2 — Open Node-RED
 
 Open Node-RED in a web browser: `http://<NODE_RED_HOST>:<NODE_RED_PORT>`
 
 Login using your own Node-RED credential.
+
+![step-2](step-2-nodered-login-page.png)
 
 ### Step 3 — Install Required Node-RED Nodes
 
@@ -116,6 +128,8 @@ In Node-RED: `Menu → Manage palette → Install`
 Install a Siemens S7 communication node, for example: `node-red-contrib-s7`
 
 You may also use other S7-compatible nodes depending on your environment.
+
+![step-3](step-3-manage-palette.png)
 
 ### Step 4 — Create S7 PLC Connection
 
@@ -132,6 +146,10 @@ Example settings:
 
 > For Siemens S7-1200, Rack 0 / Slot 1 is commonly used.
 
+![step-4-1](step-4-plc-ip-mode-name.png)
+
+![step-4-2](step-4-plc-address.png)
+
 ### Step 5 — Read PLC Data from DB100
 
 Create S7 variables for DB100.
@@ -147,7 +165,9 @@ Example:
 | count     | DB100,INT2 |
 
 
->` Address format may vary depending on the Node-RED S7 node used.
+> Address format may vary depending on the Node-RED S7 node used.
+
+![step-5](step-5-plc-variable.png)
 
 ### Step 6 — Convert PLC Data to JSON
 
@@ -156,7 +176,11 @@ Use a Function node to create an MQTT payload.
 Example:
 
 ```js
+msg.topic = "factory/plc/s7-1200/status";
+
 msg.payload = {
+    machine: "S7-1200",
+    timestamp: new Date().toISOString(),
     run: msg.payload.run,
     alarm: msg.payload.alarm,
     emergency: msg.payload.emergency,
@@ -166,6 +190,8 @@ msg.payload = {
 
 return msg;
 ```
+
+![step-6](step-6-function-node.png)
 
 ### Step 7 — Configure MQTT Broker
 
@@ -195,6 +221,8 @@ Example MQTT payload:
   "count": 12
 }
 ```
+
+![step-8](step-8-mqtt-explorer.png)
 
 ### Step 9 — Test MQTT Output
 
@@ -247,6 +275,29 @@ Example mapping:
 Important:
 - MQTT command should only request an action.
 - PLC safety logic must decide whether the action is allowed.
+
+<details>
+<summary>Setup: MQTT to PLC</summary>
+
+![step-1](step-10-1-mqtt-command.png)
+
+![step-2](step-10-2-check-cmd.png)
+
+![step-3](step-10-3-start.png)
+
+![step-4](step-10-3-stop.png)
+
+![step-5](step-10-3-reset.png)
+
+![step-6](step-10-4-plc-variable.png)
+
+![step-7](step-10-4-plc-start.png)
+
+![step-8](step-10-4-plc-stop.png)
+
+![step-9](step-10-4-plc-reset.png)
+
+</details>
 
 ---
 
