@@ -176,11 +176,18 @@ Use a Function node to create an MQTT payload.
 Example:
 
 ```js
+const now = new Date();
+
+const thailandTime = new Date(now.getTime() + (7 * 60 * 60 * 1000))
+    .toISOString()
+    .replace("Z", "+07:00");
+
 msg.topic = "factory/plc/s7-1200/status";
 
 msg.payload = {
     machine: "S7-1200",
-    timestamp: new Date().toISOString(),
+    timestamp: thailandTime,
+    timezone: "Asia/Bangkok",
     run: msg.payload.run,
     alarm: msg.payload.alarm,
     emergency: msg.payload.emergency,
