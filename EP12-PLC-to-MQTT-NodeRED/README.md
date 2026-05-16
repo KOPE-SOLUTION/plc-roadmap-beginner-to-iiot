@@ -253,6 +253,8 @@ Expected result:
 
 ### Step 10 — Optional: Send Command from MQTT to PLC
 
+![Part 2](Thumbnail-ep12-2.png)
+
 MQTT can also send commands back to PLC through Node-RED.
 
 Example command topics:
@@ -283,8 +285,6 @@ Important:
 - MQTT command should only request an action.
 - PLC safety logic must decide whether the action is allowed.
 
-<details>
-<summary>Setup: MQTT to PLC</summary>
 
 ![step-1](step-10-1-mqtt-command.png)
 
@@ -304,7 +304,6 @@ Important:
 
 ![step-9](step-10-4-plc-reset.png)
 
-</details>
 
 ---
 
