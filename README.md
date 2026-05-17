@@ -26,7 +26,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP10: PLC Data Monitoring](EP10-PLC-Data-Monitoring/README.md)
 - [EP11: PLC Communication with PC](EP11-PLC-Communication-with-PC/README.md)
 - [EP12: PLC to MQTT / Node-RED](EP12-PLC-to-MQTT-NodeRED/README.md)
-- EP13: PLC Dashboard
+- [EP13: PLC Dashboard](EP13-PLC-Dashboard-NodeRED/README.md)
 - EP14: PLC + IIoT Mini Project
 
 ## YouTube Video
