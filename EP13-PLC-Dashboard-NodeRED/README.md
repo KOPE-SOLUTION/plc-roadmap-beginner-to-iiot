@@ -197,6 +197,8 @@ Connect Function outputs to Dashboard widgets:
 
 ### Step 8 — Add Operator Buttons
 
+![thumbnail 13.1 part 2](thumbnail-13-1-part2.png)
+
 Create three dashboard buttons for machine control.
 
 These buttons will publish MQTT commands from the dashboard to Node-RED and PLC.
