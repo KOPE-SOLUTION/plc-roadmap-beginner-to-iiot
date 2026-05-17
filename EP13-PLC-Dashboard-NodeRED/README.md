@@ -12,9 +12,7 @@ The dashboard displays PLC machine data that was already published to MQTT in EP
 
 Build a dashboard that can monitor Siemens S7-1200 PLC status in real time.
 
-```text
-PLC → Node-RED → MQTT → Dashboard
-```
+![Flow](flow-13-1-part1.png)
 
 ---
 
@@ -104,7 +102,7 @@ flowchart LR
 
 ### Step 1 — Confirm EP12 is Working
 
-Make sure MQTT Explorer can receive: `factory/plc/s7-1200/status` nd can publish commands to:
+Make sure MQTT Explorer can receive: `factory/plc/s7-1200/status` and can publish commands to:
 
 ```sh
 factory/plc/s7-1200/cmd/start
