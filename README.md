@@ -42,6 +42,8 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP9: Safety Logic and Emergency Handling](https://youtu.be/yWszjPWKLWc?si=PoH_98gOj-Z1dvOA)
 - [EP10: PLC Data Monitoring](https://youtu.be/bd6XKbTyVKI)
 - [EP11: PLC Communication with PC](https://youtu.be/MGes7-Dfpz4?si=Of88M1tzov0D3vy2)
+- [EP12: PLC to MQTT / Node-RED Part 1/2](https://youtu.be/icaPqXklgpE?si=HWr2L8UI2bk9TvRr)
+- [EP12: PLC to MQTT / Node-RED Part 2/2](https://youtu.be/UOf17ojnyQU?si=4u8ngIPzTRm1TYMm)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.
