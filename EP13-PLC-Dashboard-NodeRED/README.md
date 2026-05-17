@@ -222,8 +222,7 @@ PLC Start Button
 | Topic        | `factory/plc/s7-1200/cmd/start` |
 
 Recommended style:
-- Background: `Green`
-- Icon: `play_arrow`
+- Background: `#16a34a`
 
 <br>
 
@@ -239,8 +238,7 @@ PLC Stop Button
 
 
 Recommended style:
-- Background: `Red`
-- Icon: `stop`
+- Background: `#dc2626`
 
 <br>
 
@@ -255,8 +253,7 @@ PLC Reset Button
 | Topic        | `factory/plc/s7-1200/cmd/reset` |
 
 Recommended style:
-- Background: `Orange / Yellow`
-- Icon: `restart_alt`
+- Background: `#eab308`
 
 <br>
 
