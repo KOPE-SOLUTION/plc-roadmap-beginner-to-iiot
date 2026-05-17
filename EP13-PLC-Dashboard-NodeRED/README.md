@@ -197,16 +197,83 @@ Connect Function outputs to Dashboard widgets:
 
 ### Step 8 — Add Operator Buttons
 
-Create three dashboard buttons:
+Create three dashboard buttons for machine control.
 
-| Button | MQTT Topic                    |
-| ------ | ----------------------------- |
-| Start  | factory/plc/s7-1200/cmd/start |
-| Stop   | factory/plc/s7-1200/cmd/stop  |
-| Reset  | factory/plc/s7-1200/cmd/reset |
+These buttons will publish MQTT commands from the dashboard to Node-RED and PLC.
+
+| Button | MQTT Topic                      | Payload |
+| ------ | ------------------------------- | ------- |
+| Start  | `factory/plc/s7-1200/cmd/start` | `1`     |
+| Stop   | `factory/plc/s7-1200/cmd/stop`  | `1`     |
+| Reset  | `factory/plc/s7-1200/cmd/reset` | `1`     |
 
 
-Each button sends: `1`
+#### Dashboard Button Configuration
+PLC Start Button
+
+| Setting      | Value                           |
+| ------------ | ------------------------------- |
+| Label        | `Start`                         |
+| Payload Type | `number`                        |
+| Payload      | `1`                             |
+| Topic Type   | `string`                        |
+| Topic        | `factory/plc/s7-1200/cmd/start` |
+
+Recommended style:
+- Background: `Green`
+- Icon: `play_arrow`
+
+<br>
+
+PLC Stop Button
+
+| Setting      | Value                          |
+| ------------ | ------------------------------ |
+| Label        | `Stop`                         |
+| Payload Type | `number`                       |
+| Payload      | `1`                            |
+| Topic Type   | `string`                       |
+| Topic        | `factory/plc/s7-1200/cmd/stop` |
+
+
+Recommended style:
+- Background: `Red`
+- Icon: `stop`
+
+<br>
+
+PLC Reset Button
+
+| Setting      | Value                           |
+| ------------ | ------------------------------- |
+| Label        | `Reset`                         |
+| Payload Type | `number`                        |
+| Payload      | `1`                             |
+| Topic Type   | `string`                        |
+| Topic        | `factory/plc/s7-1200/cmd/reset` |
+
+Recommended style:
+- Background: `Orange / Yellow`
+- Icon: `restart_alt`
+
+<br>
+
+### Connect Buttons to MQTT Output
+
+Connect all dashboard buttons to a single MQTT OUT node.
+
+```sh
+[PLC Start] ─┐
+[PLC Stop ] ─┼──> [MQTT OUT]
+[PLC Reset] ─┘
+```
+
+MQTT OUT Configuration
+
+eave Topic field empty.
+
+Node-RED will automatically use: `msg.topic` from each dashboard button.
+
 
 ### Step 9 — Test Dashboard
 
