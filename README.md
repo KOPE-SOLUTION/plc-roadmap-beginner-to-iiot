@@ -25,8 +25,9 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 - [EP10: PLC Data Monitoring](EP10-PLC-Data-Monitoring/README.md)
 - [EP11: PLC Communication with PC](EP11-PLC-Communication-with-PC/README.md)
-- [EP12: PLC to MQTT / Node-RED](EP12-PLC-to-MQTT-NodeRED/README.md)
-- [EP13: PLC Dashboard](EP13-PLC-Dashboard-NodeRED/README.md)
+- [EP12: PLC to MQTT / Node-RED](EP13.1-PLC-Dashboard-NodeRED/README.md)
+- [EP13.1: PLC Dashboard NodeRED](EP13-PLC-Dashboard-NodeRED/README.md)
+- [EP13.2: PLC NodeRED Influx Trend Dashboard Part 1/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-1-mqtt-to-influxdb/README.md)
 - EP14: PLC + IIoT Mini Project
 
 ## YouTube Video
@@ -44,6 +45,8 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP11: PLC Communication with PC](https://youtu.be/MGes7-Dfpz4?si=Of88M1tzov0D3vy2)
 - [EP12: PLC to MQTT / Node-RED Part 1/2](https://youtu.be/icaPqXklgpE?si=HWr2L8UI2bk9TvRr)
 - [EP12: PLC to MQTT / Node-RED Part 2/2](https://youtu.be/UOf17ojnyQU?si=4u8ngIPzTRm1TYMm)
+- [EP13.1: PLC Dashboard NodeRED Part 1/2](https://youtu.be/B16CJiN9qFw)
+- [EP13.1: PLC Dashboard NodeRED Part 2/2](https://youtu.be/0DKY3FZm0tM)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.

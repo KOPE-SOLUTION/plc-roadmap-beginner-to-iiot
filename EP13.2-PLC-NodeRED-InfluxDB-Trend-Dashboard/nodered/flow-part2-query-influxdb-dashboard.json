@@ -1,0 +1,153 @@
+[
+  {
+    "id": "tab_ep132_p2",
+    "type": "tab",
+    "label": "EP13.2 Part 2 - InfluxDB to Dashboard",
+    "disabled": false,
+    "info": "Query InfluxDB and show trend on Node-RED Dashboard"
+  },
+  {
+    "id": "inject_refresh",
+    "type": "inject",
+    "z": "tab_ep132_p2",
+    "name": "Refresh every 10 sec",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "10",
+    "crontab": "",
+    "once": true,
+    "onceDelay": "2",
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 120,
+    "wires": [
+      [
+        "fn_flux_count"
+      ]
+    ]
+  },
+  {
+    "id": "fn_flux_count",
+    "type": "function",
+    "z": "tab_ep132_p2",
+    "name": "Flux Query - Count last 1h",
+    "func": "msg.query = `from(bucket: \"plc_data\")\n  |> range(start: -1h)\n  |> filter(fn: (r) => r._measurement == \"plc_status\")\n  |> filter(fn: (r) => r._field == \"count\")\n  |> aggregateWindow(every: 10s, fn: last, createEmpty: false)\n  |> yield(name: \"count\")`;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 410,
+    "y": 120,
+    "wires": [
+      [
+        "influx_query_count"
+      ]
+    ]
+  },
+  {
+    "id": "influx_query_count",
+    "type": "influxdb in",
+    "z": "tab_ep132_p2",
+    "influxdb": "influx_config_placeholder",
+    "name": "Query Count Trend",
+    "query": "",
+    "rawOutput": false,
+    "precision": "ms",
+    "retentionPolicy": "",
+    "org": "",
+    "x": 650,
+    "y": 120,
+    "wires": [
+      [
+        "fn_format_chart",
+        "debug_query"
+      ]
+    ]
+  },
+  {
+    "id": "fn_format_chart",
+    "type": "function",
+    "z": "tab_ep132_p2",
+    "name": "Format Chart Data",
+    "func": "let rows = msg.payload || [];\n\nmsg.payload = rows.map(r => {\n  return {\n    x: new Date(r._time).getTime(),\n    y: Number(r._value)\n  };\n});\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 890,
+    "y": 100,
+    "wires": [
+      [
+        "ui_chart_count"
+      ]
+    ]
+  },
+  {
+    "id": "ui_chart_count",
+    "type": "ui_chart",
+    "z": "tab_ep132_p2",
+    "name": "Production Count Trend",
+    "group": "ui_group_trend",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "label": "Production Count Trend - Last 1 Hour",
+    "chartType": "line",
+    "legend": "false",
+    "xformat": "HH:mm:ss",
+    "interpolate": "linear",
+    "nodata": "No data",
+    "dot": false,
+    "ymin": "",
+    "ymax": "",
+    "removeOlder": "1",
+    "removeOlderPoints": "",
+    "removeOlderUnit": "3600",
+    "cutout": 0,
+    "useOneColor": false,
+    "useUTC": false,
+    "colors": [
+      "#1f77b4",
+      "#aec7e8",
+      "#ff7f0e",
+      "#2ca02c",
+      "#98df8a",
+      "#d62728",
+      "#ff9896",
+      "#9467bd",
+      "#c5b0d5"
+    ],
+    "outputs": 1,
+    "useDifferentColor": false,
+    "className": "",
+    "x": 1140,
+    "y": 100,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "debug_query",
+    "type": "debug",
+    "z": "tab_ep132_p2",
+    "name": "Debug Query Result",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 890,
+    "y": 160,
+    "wires": []
+  }
+]

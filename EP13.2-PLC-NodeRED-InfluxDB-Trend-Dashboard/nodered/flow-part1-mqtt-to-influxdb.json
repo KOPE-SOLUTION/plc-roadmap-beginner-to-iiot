@@ -1,0 +1,100 @@
+[
+  {
+    "id": "tab_ep132_p1",
+    "type": "tab",
+    "label": "EP13.2 Part 1 - MQTT to InfluxDB",
+    "disabled": false,
+    "info": "PLC MQTT status to InfluxDB"
+  },
+  {
+    "id": "mqtt_in_status",
+    "type": "mqtt in",
+    "z": "tab_ep132_p1",
+    "name": "PLC Status MQTT",
+    "topic": "factory/plc/s7-1200/status",
+    "qos": "0",
+    "datatype": "auto",
+    "broker": "mqtt_broker_placeholder",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 150,
+    "y": 100,
+    "wires": [
+      [
+        "json_parse"
+      ]
+    ]
+  },
+  {
+    "id": "json_parse",
+    "type": "json",
+    "z": "tab_ep132_p1",
+    "name": "Parse JSON",
+    "property": "payload",
+    "action": "",
+    "pretty": false,
+    "x": 360,
+    "y": 100,
+    "wires": [
+      [
+        "fn_prepare_influx"
+      ]
+    ]
+  },
+  {
+    "id": "fn_prepare_influx",
+    "type": "function",
+    "z": "tab_ep132_p1",
+    "name": "Prepare InfluxDB Point",
+    "func": "const data = msg.payload;\n\nmsg.payload = [\n  {\n    measurement: \"plc_status\",\n    tags: {\n      machine: data.machine || \"S7-1200\",\n      source: \"mqtt\"\n    },\n    fields: {\n      run: data.run ? 1 : 0,\n      alarm: data.alarm ? 1 : 0,\n      emergency: data.emergency ? 1 : 0,\n      ready: data.ready ? 1 : 0,\n      count: Number(data.count || 0)\n    },\n    timestamp: data.timestamp ? new Date(data.timestamp) : new Date()\n  }\n];\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 610,
+    "y": 100,
+    "wires": [
+      [
+        "influx_write",
+        "debug_point"
+      ]
+    ]
+  },
+  {
+    "id": "influx_write",
+    "type": "influxdb out",
+    "z": "tab_ep132_p1",
+    "influxdb": "influx_config_placeholder",
+    "name": "Write plc_status",
+    "measurement": "plc_status",
+    "precision": "ms",
+    "retentionPolicy": "",
+    "database": "",
+    "precisionV18FluxV20": "ms",
+    "org": "",
+    "bucket": "plc_data",
+    "x": 870,
+    "y": 80,
+    "wires": []
+  },
+  {
+    "id": "debug_point",
+    "type": "debug",
+    "z": "tab_ep132_p1",
+    "name": "Debug Influx Point",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 880,
+    "y": 140,
+    "wires": []
+  }
+]
