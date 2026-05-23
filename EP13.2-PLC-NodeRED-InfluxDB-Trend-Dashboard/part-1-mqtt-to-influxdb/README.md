@@ -8,6 +8,8 @@
 MQTT Status → Node-RED → InfluxDB
 ```
 
+![Thumbnail ep13.2 part 1/2](Thumbnail-EP13-2-Part1-2.png)
+
 ---
 
 ## Input MQTT Topic
