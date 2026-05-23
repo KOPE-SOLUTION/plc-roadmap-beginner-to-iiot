@@ -48,7 +48,7 @@
     "type": "function",
     "z": "tab_ep132_p1",
     "name": "Prepare InfluxDB Point",
-    "func": "const data = msg.payload;\n\nmsg.payload = [\n  {\n    measurement: \"plc_status\",\n    tags: {\n      machine: data.machine || \"S7-1200\",\n      source: \"mqtt\"\n    },\n    fields: {\n      run: data.run ? 1 : 0,\n      alarm: data.alarm ? 1 : 0,\n      emergency: data.emergency ? 1 : 0,\n      ready: data.ready ? 1 : 0,\n      count: Number(data.count || 0)\n    },\n    timestamp: data.timestamp ? new Date(data.timestamp) : new Date()\n  }\n];\n\nreturn msg;",
+    "func": "const data = msg.payload;\n\nmsg.measurement = \"plc_status\";\n\nmsg.payload = {\n  run: data.run ? 1 : 0,\n  alarm: data.alarm ? 1 : 0,\n  emergency: data.emergency ? 1 : 0,\n  ready: data.ready ? 1 : 0,\n  count: Number(data.count || 0)\n};\n\nreturn msg;",
     "outputs": 1,
     "noerr": 0,
     "initialize": "",

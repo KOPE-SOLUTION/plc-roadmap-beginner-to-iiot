@@ -10,6 +10,8 @@ MQTT Status → Node-RED → InfluxDB
 
 ![Thumbnail ep13.2 part 1/2](Thumbnail-EP13-2-Part1-2.png)
 
+![Flow](Flow.png)
+
 ---
 
 ## Input MQTT Topic
@@ -25,23 +27,15 @@ factory/plc/s7-1200/status
 ```js
 const data = msg.payload;
 
-msg.payload = [
-  {
-    measurement: "plc_status",
-    tags: {
-      machine: data.machine || "S7-1200",
-      source: "mqtt"
-    },
-    fields: {
-      run: data.run ? 1 : 0,
-      alarm: data.alarm ? 1 : 0,
-      emergency: data.emergency ? 1 : 0,
-      ready: data.ready ? 1 : 0,
-      count: Number(data.count || 0)
-    },
-    timestamp: data.timestamp ? new Date(data.timestamp) : new Date()
-  }
-];
+msg.measurement = "plc_status";
+
+msg.payload = {
+  run: data.run ? 1 : 0,
+  alarm: data.alarm ? 1 : 0,
+  emergency: data.emergency ? 1 : 0,
+  ready: data.ready ? 1 : 0,
+  count: Number(data.count || 0)
+};
 
 return msg;
 ```
