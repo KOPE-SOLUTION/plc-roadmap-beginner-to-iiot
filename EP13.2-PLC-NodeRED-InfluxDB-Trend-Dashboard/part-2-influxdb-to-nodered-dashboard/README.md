@@ -14,19 +14,6 @@ InfluxDB → Node-RED Query → Dashboard Chart
 
 ---
 
-## Flux Query: Production Count Trend
-
-```flux
-from(bucket: "plc_data")
-  |> range(start: -1h)
-  |> filter(fn: (r) => r._measurement == "plc_status")
-  |> filter(fn: (r) => r._field == "count")
-  |> aggregateWindow(every: 10s, fn: last, createEmpty: false)
-  |> yield(name: "count")
-```
-
----
-
 ## Suggested Dashboard Layout
 
 | Group | Widget | Purpose |
@@ -59,7 +46,7 @@ msg.query = `from(bucket: "plc_data")
   |> range(start: -1h)
   |> filter(fn: (r) => r._measurement == "plc_status")
   |> filter(fn: (r) => r._field == "count")
-  |> aggregateWindow(every: 10s, fn: mean, createEmpty: false)
+  |> aggregateWindow(every: 10s, fn: last, createEmpty: false)
   |> yield(name: "count_trend")`;
 
 return msg;
