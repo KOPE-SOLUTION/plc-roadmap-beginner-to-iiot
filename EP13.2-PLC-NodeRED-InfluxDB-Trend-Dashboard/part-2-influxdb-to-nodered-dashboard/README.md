@@ -4,6 +4,8 @@
 
 ดึงข้อมูลย้อนหลังจาก InfluxDB แล้วแสดง Trend บน Node-RED Dashboard
 
+![Thumbnail](Thumbnail-ep13-2-part-2-2.png)
+
 ```text
 InfluxDB → Node-RED Query → Dashboard Chart
 ```
