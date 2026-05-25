@@ -142,15 +142,21 @@ InfluxDB → Node-RED Query → Format Multi-Series → Dashboard Chart
 ### 1.Inject Node
 
 Node: `inject`
+
 Name: `Auto Refresh Machine State Every 30 sec`
+
 Repeat: `interval every 30 seconds`
+
 Once: `enabled`
+
 Once delay: `3 seconds`
 
 ### 2. Function: Flux Query Machine State
 
 Node: `function`
+
 Name: `Flux Query - Machine State Last 1h`
+
 Code:
 ```js
 msg.query = `from(bucket: "plc_data")
@@ -171,8 +177,11 @@ return msg;
 ### 3. InfluxDB In Node
 
 Node: `influxdb in`
+
 Name: `Query Machine State History`
+
 Server: `Real Time Database`
+
 Organization: `kope-solution`
 
 > ช่อง Query ปล่อยว่างไว้ เพราะเราใช้ msg.query
@@ -194,7 +203,9 @@ Query Machine State History
 4.1 Function: Format Run Trend
 
 Node: `function`
+
 Name: `Format Run Trend`
+
 Code:
 ```js
 let rows = msg.payload || [];
@@ -220,6 +231,7 @@ return msg;
 4.2 Function: Format Ready Trend
 
 Node: `function`
+
 Name: `Format Ready Trend`
 
 Code:
@@ -247,8 +259,10 @@ return msg;
 
 4.3 Function: Format Alarm Trend
 
-Node: function
-Name: Format Alarm Trend
+Node: `function`
+
+Name: `Format Alarm Trend`
+
 Code:
 
 ```js
@@ -274,8 +288,9 @@ return msg;
 
 4.4 Function: Format Emergency Trend
 
-Node: function
-Name: Format Emergency Trend
+Node: `function`
+
+Name: `Format Emergency Trend`
 
 Code:
 
@@ -312,15 +327,25 @@ return msg;
 ตั้งค่า Chart ทุกตัวเหมือนกันดังนี้:
 
 Node: `dashboard 2 → chart`
+
 Type: `Line`
+
 Interpolation: `Step`
+
 Action: `Replace`
+
 Series: `msg.topic`
+
 X-Axis Type: `Timescale`
+
 X: `key x`
+
 Y: `key y`
+
 Y min: `0`
+
 Y max: `1`
+
 Remove older: `1 Hours`
 
 ![state-dashboard](state-dashboard.png)
