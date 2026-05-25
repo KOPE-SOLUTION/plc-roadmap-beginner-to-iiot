@@ -31,9 +31,13 @@ InfluxDB → Node-RED Query → Dashboard Chart
 ### 1. Inject Node
 
 Node: `inject`
+
 Name: `Auto Refresh Every 30 sec`
+
 Repeat: `interval every 30 seconds`
+
 Once: `enabled`
+
 Once delay: `2 seconds`
 
 ### 2. Function: Flux Query
@@ -86,17 +90,29 @@ return msg;
 ### 5. Dashboard 2 Chart
 
 Node: `dashboard 2 → chart`
+
 Name: `Production Count Trend`
+
 Label: `Production Count Trend - Last 1 Hour`
+
 Type: `Line`
+
 Interpolation: `Linear`
+
 Action: `Replace`
+
 Series: `msg.topic`
+
 X-Axis Type: `Timescale`
+
 X: `key x`
+
 Y: `key y`
+
 Y min: `0`
+
 Y max: `999`
+
 Remove older: `1 Hours`
 
 ### 6. Wire flow
