@@ -29,6 +29,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP13.1: PLC Dashboard NodeRED](EP13-PLC-Dashboard-NodeRED/README.md)
 - [EP13.2: PLC NodeRED Influx Trend Dashboard Part 1/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-1-mqtt-to-influxdb/README.md)
 - [EP13.2: PLC NodeRED Influx Trend Dashboard Part 2/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-2-influxdb-to-nodered-dashboard/README.md)
+- [EP13.3: Grafana Dashboard](EP13.3-Grafana-Dashboard/README.md)
 - EP14: PLC + IIoT Mini Project
 
 ## YouTube Video
