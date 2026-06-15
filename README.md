@@ -25,7 +25,8 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 - [EP10: PLC Data Monitoring](EP10-PLC-Data-Monitoring/README.md)
 - [EP11: PLC Communication with PC](EP11-PLC-Communication-with-PC/README.md)
-- [EP12: PLC to MQTT / Node-RED](EP13.1-PLC-Dashboard-NodeRED/README.md)
+- [EP12.0: Raspberry-Pi-Setup](EP12.0-Raspberry-Pi-Setup/README.md)
+- [EP12.1: PLC to MQTT / Node-RED](EP12.1-PLC-to-MQTT-NodeRED)
 - [EP13.1: PLC Dashboard NodeRED](EP13-PLC-Dashboard-NodeRED/README.md)
 - [EP13.2: PLC NodeRED Influx Trend Dashboard Part 1/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-1-mqtt-to-influxdb/README.md)
 - [EP13.2: PLC NodeRED Influx Trend Dashboard Part 2/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-2-influxdb-to-nodered-dashboard/README.md)
@@ -49,6 +50,9 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 - [EP12: PLC to MQTT / Node-RED Part 2/2](https://youtu.be/UOf17ojnyQU?si=4u8ngIPzTRm1TYMm)
 - [EP13.1: PLC Dashboard NodeRED Part 1/2](https://youtu.be/B16CJiN9qFw)
 - [EP13.1: PLC Dashboard NodeRED Part 2/2](https://youtu.be/0DKY3FZm0tM)
+- [EP13.2: PLC NodeRED Influx Trend Dashboard Part 1/2](https://youtu.be/1OPW_lHbgas?si=TXX9rhiSKj2Jpn51)
+- [EP13.2: PLC NodeRED Influx Trend Dashboard Part 2/2](https://youtu.be/BGM57mHx7zI?si=qW-ygk5xFpq8Dfos)
+- [EP13.3: Grafana Dashboard](https://youtu.be/muwHSFl6hR4?si=bMeyA3q5mkVfSNAJ)
 
 ## Goal
 Build real industrial PLC skills step-by-step and extend to IIoT systems.

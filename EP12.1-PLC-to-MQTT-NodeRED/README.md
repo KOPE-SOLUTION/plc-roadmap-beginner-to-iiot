@@ -1,4 +1,4 @@
-# EP12 — PLC to MQTT / Node-RED
+# EP12.1 — PLC to MQTT / Node-RED
 
 This episode introduces Industrial IoT communication using Siemens S7-1200 PLC.
 
