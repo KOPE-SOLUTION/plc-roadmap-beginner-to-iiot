@@ -25,7 +25,7 @@ A hands-on learning series from basic ladder logic to industrial automation and 
 
 - [EP10: PLC Data Monitoring](EP10-PLC-Data-Monitoring/README.md)
 - [EP11: PLC Communication with PC](EP11-PLC-Communication-with-PC/README.md)
-- [EP12.0: Raspberry-Pi-Setup](EP12.0-Raspberry-Pi-Setup/README.md)
+- [EP12.0: Raspberry-Pi-Setup-For-PLC Part 1](EP12.0-Raspberry-Pi-Setup/README.md)
 - [EP12.1: PLC to MQTT / Node-RED](EP12.1-PLC-to-MQTT-NodeRED)
 - [EP13.1: PLC Dashboard NodeRED](EP13-PLC-Dashboard-NodeRED/README.md)
 - [EP13.2: PLC NodeRED Influx Trend Dashboard Part 1/2](EP13.2-PLC-NodeRED-InfluxDB-Trend-Dashboard/part-1-mqtt-to-influxdb/README.md)
